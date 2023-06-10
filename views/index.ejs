@@ -8,7 +8,7 @@
     <title>CRUD</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
         <div class="container-fluid">        
     <nav class="navbar navbar-dark">      
       </nav>            
@@ -32,16 +32,22 @@
           <tr class="bg-secondary text-black">
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Rol</th>            
-            <th scope="col">ACCIONES</th>            
+            <th scope="col">Apellidos</th>            
+            <th scope="col">Correo</th>  
+            <th scope="col">Fecha</th> 
+            <th scope="col">Imagen</th>
+            <th scope="col">Acciones</th>         
           </tr>
         </thead>
         <tbody>
           <% results.forEach((user)=>{ %>
             <tr>  
                 <td><%= user.id %></td>  
-                <td><%= user.name %></td>
-                <td><%= user.rol %></td>
+                <td><%= user.nombre %></td>
+                <td><%= user.apellidos %></td>
+                <td><%= user.correo %></td>
+                <td><%= user.fecha_nac %></td>
+                <td><%= user.imagen %></td>
                 <td>
                   <a href="/edit/<%= user.id %>" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
                   <a href="/delete/<%= user.id %>" class="btn btn-outline-danger"><i class='bx bxs-trash-alt'></i></a>                   

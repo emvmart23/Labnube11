@@ -4,7 +4,7 @@ const router = express.Router();
 const conexion = require('./database/db');
 
 router.get('/', (req, res)=>{     
-    conexion.query('SELECT * FROM contacts',(error, results)=>{
+    conexion.query('SELECT * FROM users',(error, results)=>{
         if(error){
             throw error;
         } else {                       
@@ -19,7 +19,7 @@ router.get('/create', (req,res)=>{
 
 router.get('/edit/:id', (req,res)=>{    
     const id = req.params.id;
-    conexion.query('SELECT * FROM contacts WHERE id=?',[id] , (error, results) => {
+    conexion.query('SELECT * FROM users WHERE id=?',[id] , (error, results) => {
         if (error) {
             throw error;
         }else{            

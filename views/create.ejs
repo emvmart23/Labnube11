@@ -27,18 +27,28 @@
             <div class="card border-secondary">  
                 <div class="card-header">Nuevo Registro</div>
                 <div class="card-body">
-                    <form action="/save" method="POST">
+                    <form action="/save" method="POST">  
                         <div class="mb-3">
-                        <label for="user" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="name" name="name" tabindex="1">
-                        </div>   
+                          <label for="user" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1">
+                        </div>
                         <div class="mb-3">
-                        <label for="user" class="form-label">Rol</label>
-                        <select id="rol" name="rol" class="form-select" aria-label="Default select example" tabindex="2">
-                            <option value="admin" selected>Usuario</option>
-                            <option value="data entry">Admin</option>                    
-                        </select>
-                        </div>                                   
+                          <label for="user" class="form-label">Apellidos</label>
+                          <input type="text" class="form-control" id="apellidos" name="apellidos" tabindex="1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="user" class="form-label">Correo</label>
+                          <input type="text" class="form-control" id="correo" name="correo" tabindex="1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="user" class="form-label">fecha_nac</label>
+                          <input type="text" class="form-control" id="fecha_nac" name="fecha_nac" tabindex="1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="user" class="form-label">Imagen</label>
+                          <input type="file" class="form-control" id="imagen" name="imagen" tabindex="1">
+                        </div>
+                        
                         <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
                         <a href="/" class="btn btn-secondary">Cancelar</a>
                     </form>
